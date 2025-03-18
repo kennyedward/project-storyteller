@@ -22,8 +22,14 @@ const CaseStudyHeader: React.FC<CaseStudyHeaderProps> = ({
     <div className="w-full">
       <div className="pt-8 md:pt-16 px-8 md:px-16 mb-8 md:mb-16">
         <div className="max-w-5xl mx-auto">
-          <h1 className="font-bricolage text-3xl md:text-5xl font-semibold mb-6">{title}</h1>
-          <p className="font-manrope text-xl md:text-2xl text-neutral-700 mb-12 max-w-3xl">{tagline}</p>
+          <div className="flex flex-col md:flex-row md:gap-12">
+            <div className="md:w-2/3">
+              <h1 className="font-bricolage text-3xl md:text-5xl font-semibold mb-6">{title}</h1>
+            </div>
+            <div className="md:w-1/3">
+              <p className="font-manrope text-base md:text-lg text-neutral-700 mb-8">{tagline}</p>
+            </div>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div>

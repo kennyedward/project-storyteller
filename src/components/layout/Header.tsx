@@ -6,11 +6,11 @@ const Header = () => {
   return (
     <header className="py-6 px-8 md:px-16 flex items-center justify-between w-full">
       <div className="logo">
-        <Link to="/" className="font-bricolage text-xl font-semibold">PORTFOLIO</Link>
+        <Link to="/" className="font-bricolage text-xl font-semibold">eko.</Link>
       </div>
       
-      <div className="hidden md:block text-center">
-        <span className="font-manrope text-sm tracking-wider uppercase">Product Design & Design Systems</span>
+      <div className="hidden md:block text-center absolute left-1/2 transform -translate-x-1/2">
+        <span className="font-manrope text-sm tracking-wider">Product Design & Design Systems</span>
       </div>
       
       <nav className="hidden md:flex items-center space-x-8">

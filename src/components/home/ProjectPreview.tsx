@@ -18,15 +18,21 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
   contributions,
   imageUrl,
   slug,
-  direction = 'normal',
+  direction = 'normal', // We'll keep this prop for future flexibility, but won't use it for layout
 }) => {
   return (
-    <div 
-      className={`flex flex-col ${
-        direction === 'reverse' ? 'md:flex-row-reverse' : 'md:flex-row'
-      } gap-8 md:gap-16 w-full py-16 md:py-24 px-8 md:px-16 border-b border-neutral-200`}
-    >
-      <div className="w-full md:w-1/2 flex flex-col justify-center">
+    <div className="w-full py-16 md:py-24 px-8 md:px-16 border-b border-neutral-200">
+      <div className="w-full overflow-hidden rounded-lg bg-neutral-100 mb-8">
+        <Link to={`/case-study/${slug}`}>
+          <img 
+            src={imageUrl} 
+            alt={title} 
+            className="w-full h-auto object-cover transition-transform hover:scale-105 duration-500"
+          />
+        </Link>
+      </div>
+      
+      <div className="w-full">
         <h2 className="font-bricolage text-3xl md:text-4xl font-semibold mb-6">{title}</h2>
         <p className="font-manrope text-neutral-700 mb-8 max-w-xl">{description}</p>
         
@@ -45,16 +51,6 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
         >
           View case study 
           <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-        </Link>
-      </div>
-      
-      <div className="w-full md:w-1/2 overflow-hidden rounded-lg bg-neutral-100">
-        <Link to={`/case-study/${slug}`}>
-          <img 
-            src={imageUrl} 
-            alt={title} 
-            className="w-full h-auto object-cover transition-transform hover:scale-105 duration-500"
-          />
         </Link>
       </div>
     </div>

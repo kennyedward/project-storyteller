@@ -21,9 +21,9 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "1",
-    title: "Enterprise Design System",
+    title: "Building Forto's design system from the ground up",
     slug: "enterprise-design-system",
-    description: "Creating a scalable design system for a large enterprise platform, improving consistency, accessibility, and developer efficiency.",
+    description: "Forto delivers tech-driven solutions to streamline global logistics, and I contributed to building a design system for its SHIP platform—a tool for managing and optimizing shipments. My work focused on creating a scalable, consistent UI framework to support Forto's growing team and evolving product needs.",
     contributions: [
       "Design system architecture",
       "Component library design",
@@ -33,11 +33,11 @@ export const projects: Project[] = [
     imageUrl: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2000",
     coverImage: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2000",
     tagline: "Building a unified design language for enterprise software",
-    client: "Enterprise Corp",
+    client: "Forto",
     timeline: "8 months",
     role: "Lead Designer",
-    problem: "Enterprise Corp was struggling with inconsistent user experiences across their product suite, leading to customer confusion and inefficient development cycles. The design and development teams had no shared language or component library, resulting in duplicated work and quality issues.",
-    approach: "I led a cross-functional team to create a comprehensive design system that would serve as the single source of truth for all digital products at Enterprise Corp. The approach focused on building not just components, but also establishing governance, documentation, and adoption strategies.",
+    problem: "Forto was struggling with inconsistent user experiences across their product suite, leading to customer confusion and inefficient development cycles. The design and development teams had no shared language or component library, resulting in duplicated work and quality issues.",
+    approach: "I led a cross-functional team to create a comprehensive design system that would serve as the single source of truth for all digital products at Forto. The approach focused on building not just components, but also establishing governance, documentation, and adoption strategies.",
     process: [
       "Conducted an extensive audit of existing products and interfaces to identify patterns and inconsistencies",
       "Collaborated with stakeholders to define core design principles and usage guidelines",
