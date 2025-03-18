@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
+import { useEffect } from "react";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Resume from "./pages/Resume";
@@ -14,9 +15,20 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// Component to force dark mode initially
+const ThemeForcer = () => {
+  useEffect(() => {
+    // Apply dark mode class to html on initial load
+    document.documentElement.classList.add('dark');
+  }, []);
+  
+  return null;
+}
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <ThemeProvider attribute="class" defaultTheme="dark">
+    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+      <ThemeForcer />
       <TooltipProvider>
         <Toaster />
         <Sonner />
