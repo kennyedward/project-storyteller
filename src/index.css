@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -98,4 +99,17 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+/* Optional: Add styles for smooth transitions when switching themes */
+html.dark {
+  @apply transition-colors duration-300;
+}
+
+html.light {
+  @apply transition-colors duration-300;
 }
