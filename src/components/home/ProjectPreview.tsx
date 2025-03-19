@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 
 interface ProjectPreviewProps {
   title: string;
@@ -21,8 +22,8 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
   direction = 'normal', // We'll keep this prop for future flexibility, but won't use it for layout
 }) => {
   return (
-    <div className="w-full py-16 md:py-24 px-8 md:px-16 border-b border-neutral-200">
-      <div className="w-full overflow-hidden rounded-lg bg-neutral-100 mb-8">
+    <div className="w-full py-16 md:py-24 px-8 md:px-16 border-b border-neutral-200 dark:border-neutral-800">
+      <div className="w-full overflow-hidden rounded-lg mb-8 max-h-[400px]">
         <Link to={`/case-study/${slug}`}>
           <img 
             src={imageUrl} 
@@ -32,26 +33,34 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
         </Link>
       </div>
       
-      <div className="w-full">
-        <h2 className="font-bricolage text-3xl md:text-4xl font-semibold mb-6">{title}</h2>
-        <p className="font-manrope text-neutral-700 mb-8 max-w-xl">{description}</p>
-        
-        <div className="mb-8">
-          <h3 className="font-bricolage text-lg font-medium mb-3">Contributions</h3>
-          <ul className="space-y-2">
-            {contributions.map((contribution, idx) => (
-              <li key={idx} className="font-manrope text-neutral-600">• {contribution}</li>
-            ))}
-          </ul>
+      <div className="w-full flex flex-col md:flex-row gap-8">
+        <div className="flex-1">
+          <h2 className="font-bricolage text-3xl md:text-4xl font-semibold mb-6">{title}</h2>
+          <p className="font-manrope text-neutral-700 dark:text-neutral-300 mb-8 max-w-xl">{description}</p>
+          
+          <Link 
+            to={`/case-study/${slug}`} 
+            className="inline-flex items-center font-manrope text-black dark:text-white hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors group"
+          >
+            View case study 
+            <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+          </Link>
         </div>
         
-        <Link 
-          to={`/case-study/${slug}`} 
-          className="inline-flex items-center font-manrope text-black hover:text-neutral-600 transition-colors group"
-        >
-          View case study 
-          <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-        </Link>
+        <div className="md:w-2/5">
+          <h3 className="font-bricolage text-lg font-medium mb-4">Contributions</h3>
+          <div className="flex flex-wrap gap-2">
+            {contributions.map((contribution, idx) => (
+              <Badge 
+                key={idx} 
+                variant="secondary" 
+                className="font-manrope text-xs py-1 px-3 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300"
+              >
+                {contribution}
+              </Badge>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
