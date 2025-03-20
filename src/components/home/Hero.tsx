@@ -9,7 +9,7 @@ const Hero = () => {
           Hey, I'm Kehinde Odewole - a digital designer based in Berlin.
         </p>
         <h1 className="font-bricolage text-4xl md:text-6xl font-semibold leading-tight mb-6 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-          A digital designer specializing in crafting seamless user experiences and scalable design systems.
+          Specialized in crafting seamless user experiences and scalable design systems.
         </h1>
       </div>
     </section>

@@ -41,8 +41,8 @@ const Header = () => {
   };
 
   return (
-    <header className={`py-6 px-8 md:px-16 flex items-center justify-between w-full sticky top-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-neutral-900/80 backdrop-blur-md shadow-md' : 'bg-transparent'
+    <header className={`py-6 px-8 md:px-16 flex items-center justify-between w-full sticky top-0 z-50 transition-all duration-300 max-w-7xl mx-auto ${
+      scrolled ? 'bg-neutral-900/80 backdrop-blur-md shadow-md rounded-full px-8' : 'bg-transparent'
     }`}>
       <div className="logo">
         <Link to="/" className="font-bricolage text-3xl font-semibold">eko.</Link>
