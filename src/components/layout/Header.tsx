@@ -18,10 +18,18 @@ const Header = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
   };
 
+  const scrollToFooter = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const footer = document.querySelector('footer');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="py-6 px-8 md:px-16 flex items-center justify-between w-full">
       <div className="logo">
-        <Link to="/" className="font-bricolage text-xl font-semibold">eko.</Link>
+        <Link to="/" className="font-bricolage text-2xl md:text-3xl font-semibold">eko.</Link>
       </div>
       
       <div className="hidden md:block text-center absolute left-1/2 transform -translate-x-1/2">
@@ -32,7 +40,7 @@ const Header = () => {
         <Link to="/" className="font-manrope text-sm hover:underline">Projects</Link>
         <Link to="/about" className="font-manrope text-sm hover:underline">About</Link>
         <Link to="/resume" className="font-manrope text-sm hover:underline">Resume</Link>
-        <Link to="/contact" className="font-manrope text-sm hover:underline">Get in touch</Link>
+        <a href="#footer" onClick={scrollToFooter} className="font-manrope text-sm hover:underline">Get in touch</a>
         <Button 
           variant="ghost" 
           size="icon" 

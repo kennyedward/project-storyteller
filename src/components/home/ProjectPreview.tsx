@@ -19,11 +19,11 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
   contributions,
   imageUrl,
   slug,
-  direction = 'normal', // We'll keep this prop for future flexibility, but won't use it for layout
+  direction = 'normal',
 }) => {
   return (
     <div className="w-full py-16 md:py-24 px-8 md:px-16 border-b border-neutral-200 dark:border-neutral-800">
-      <div className="w-full overflow-hidden rounded-lg mb-8 max-h-[400px]">
+      <div className="w-full overflow-hidden rounded-lg mb-8 max-h-[350px]">
         <Link to={`/case-study/${slug}`}>
           <img 
             src={imageUrl} 
@@ -42,7 +42,7 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
             to={`/case-study/${slug}`} 
             className="inline-flex items-center font-manrope text-black dark:text-white hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors group"
           >
-            View case study 
+            View showcase 
             <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
@@ -54,7 +54,7 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
               <Badge 
                 key={idx} 
                 variant="secondary" 
-                className="font-manrope text-xs py-1 px-3 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300"
+                className="font-manrope text-xs py-2 px-4 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-full"
               >
                 {contribution}
               </Badge>

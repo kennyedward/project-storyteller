@@ -14,6 +14,10 @@ const Index = () => {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ '--column-spacing': '1.5vw' } as React.CSSProperties}>
         <Hero />
         
+        <div className="py-8 md:py-12 px-8 md:px-16">
+          <h2 className="font-bricolage text-3xl md:text-4xl font-semibold mb-4">Selected work</h2>
+        </div>
+        
         <div className="projects-container">
           {projects.map((project, index) => (
             <ProjectPreview
