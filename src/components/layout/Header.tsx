@@ -8,6 +8,20 @@ import { Button } from '@/components/ui/button';
 const Header = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 20;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [scrolled]);
   
   // After mounting, we can safely access the theme
   useEffect(() => {
@@ -27,25 +41,31 @@ const Header = () => {
   };
 
   return (
-    <header className="py-6 px-8 md:px-16 flex items-center justify-between w-full">
+    <header className={`py-6 px-8 md:px-16 flex items-center justify-between w-full sticky top-0 z-50 transition-all duration-300 ${
+      scrolled ? 'bg-neutral-900/80 backdrop-blur-md shadow-md' : 'bg-transparent'
+    }`}>
       <div className="logo">
-        <Link to="/" className="font-bricolage text-2xl md:text-3xl font-semibold">eko.</Link>
+        <Link to="/" className="font-bricolage text-3xl font-semibold">eko.</Link>
       </div>
       
-      <div className="hidden md:block text-center absolute left-1/2 transform -translate-x-1/2">
+      <div className={`hidden md:block text-center absolute left-1/2 transform -translate-x-1/2 transition-opacity duration-300 ${
+        scrolled ? 'opacity-0' : 'opacity-100'
+      }`}>
         <span className="font-manrope text-sm tracking-wider">Product Design & Design Systems</span>
       </div>
       
-      <nav className="hidden md:flex items-center space-x-8">
-        <Link to="/" className="font-manrope text-sm hover:underline">Projects</Link>
-        <Link to="/about" className="font-manrope text-sm hover:underline">About</Link>
-        <Link to="/resume" className="font-manrope text-sm hover:underline">Resume</Link>
-        <a href="#footer" onClick={scrollToFooter} className="font-manrope text-sm hover:underline">Get in touch</a>
+      <nav className={`hidden md:flex items-center transition-all duration-300 ${
+        scrolled ? 'bg-neutral-800/50 backdrop-blur-sm rounded-full px-4 py-2' : ''
+      }`}>
+        <Link to="/" className="font-manrope text-sm hover:text-neutral-400 transition-colors px-4 py-2">Projects</Link>
+        <Link to="/about" className="font-manrope text-sm hover:text-neutral-400 transition-colors px-4 py-2">About</Link>
+        <Link to="/resume" className="font-manrope text-sm hover:text-neutral-400 transition-colors px-4 py-2">Resume</Link>
+        <a href="#footer" onClick={scrollToFooter} className="font-manrope text-sm hover:text-neutral-400 transition-colors px-4 py-2">Get in touch</a>
         <Button 
           variant="ghost" 
           size="icon" 
           onClick={toggleTheme}
-          className="rounded-full"
+          className="rounded-full ml-2"
           aria-label="Toggle theme"
         >
           {mounted && (

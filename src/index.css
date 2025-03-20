@@ -104,3 +104,17 @@
 html {
   @apply scroll-smooth transition-colors duration-300;
 }
+
+/* Add some custom styling for sticky header */
+.sticky-header {
+  @apply transition-all duration-300;
+}
+
+.sticky-header.scrolled {
+  @apply bg-neutral-900/80 backdrop-blur-md shadow-md;
+}
+
+/* Smooth transitions for all elements */
+* {
+  @apply transition-colors duration-300;
+}

@@ -15,10 +15,10 @@ const Index = () => {
         <Hero />
         
         <div className="py-8 md:py-12 px-8 md:px-16">
-          <h2 className="font-bricolage text-3xl md:text-4xl font-semibold mb-4">Selected work</h2>
+          <h2 className="font-bricolage text-3xl md:text-4xl font-semibold mb-8">Selected work</h2>
         </div>
         
-        <div className="projects-container">
+        <div className="projects-container space-y-16 md:space-y-24">
           {projects.map((project, index) => (
             <ProjectPreview
               key={project.id}

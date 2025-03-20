@@ -22,8 +22,8 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
   direction = 'normal',
 }) => {
   return (
-    <div className="w-full py-16 md:py-24 px-8 md:px-16 border-b border-neutral-200 dark:border-neutral-800">
-      <div className="w-full overflow-hidden rounded-lg mb-8 max-h-[350px]">
+    <div className="w-full py-16 md:py-20 px-8 md:px-16">
+      <div className="w-full overflow-hidden rounded-lg mb-8 max-h-[300px]">
         <Link to={`/case-study/${slug}`}>
           <img 
             src={imageUrl} 
