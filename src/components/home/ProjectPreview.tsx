@@ -40,9 +40,9 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
           
           <Link 
             to={`/case-study/${slug}`} 
-            className="inline-flex items-center font-manrope text-black dark:text-white hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors group"
+            className="inline-flex items-center font-manrope text-black dark:text-white hover:text-neutral-600 dark:hover:text-neutral-400 transition-all group relative"
           >
-            View showcase 
+            <span className="pb-1 border-b-2 border-transparent group-hover:border-current transition-all duration-300 pr-1">View showcase</span>
             <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
