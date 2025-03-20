@@ -97,12 +97,12 @@
   }
 
   body {
-    @apply bg-background text-foreground transition-colors duration-300;
+    @apply bg-background text-foreground transition-colors duration-200;
   }
 }
 
 html {
-  @apply scroll-smooth transition-colors duration-300;
+  @apply scroll-smooth transition-colors duration-200;
 }
 
 /* Add some custom styling for sticky header */
@@ -116,5 +116,5 @@ html {
 
 /* Smooth transitions for all elements */
 * {
-  @apply transition-colors duration-300;
+  @apply transition-colors duration-200;
 }
