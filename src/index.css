@@ -53,29 +53,29 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 2%; /* #050505 */
+    --foreground: 0 0% 89%; /* #E3E3E3 */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 2%;
+    --card-foreground: 0 0% 89%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 2%;
+    --popover-foreground: 0 0% 89%;
 
-    --primary: 210 40% 98%;
+    --primary: 0 0% 89%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary-foreground: 0 0% 89%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
     --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent-foreground: 0 0% 89%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 89%;
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
@@ -97,12 +97,12 @@
   }
 
   body {
-    @apply bg-background text-foreground transition-colors duration-200;
+    @apply bg-background text-foreground transition-colors duration-100;
   }
 }
 
 html {
-  @apply scroll-smooth transition-colors duration-200;
+  @apply scroll-smooth transition-colors duration-100;
 }
 
 /* Add some custom styling for sticky header */
@@ -116,5 +116,5 @@ html {
 
 /* Smooth transitions for all elements */
 * {
-  @apply transition-colors duration-200;
+  @apply transition-colors duration-100;
 }
