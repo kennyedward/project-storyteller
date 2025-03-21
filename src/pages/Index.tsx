@@ -16,7 +16,7 @@ const Index = () => {
         <Hero />
         
         <div className="py-8 md:py-12 px-8 md:px-16">
-          <div className="flex items-center mb-8">
+          <div className="flex items-end mb-8">
             <h2 className="font-bricolage text-3xl md:text-4xl font-semibold">Selected work</h2>
             <ChevronDown className="w-6 h-6 ml-2 animate-bounce opacity-70" />
           </div>
