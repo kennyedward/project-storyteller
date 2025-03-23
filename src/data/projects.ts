@@ -32,8 +32,8 @@ export const projects: Project[] = [
       "Developer handoff",
       "Documentation & governance"
     ],
-    imageUrl: "https://res.cloudinary.com/dnc96hent/image/upload/c_fill,g_auto,h_250,w_970/b_rgb:000000,e_gradient_fade,y_-0.50/c_scale,co_rgb:ffffff,fl_relative,l_text:montserrat_25_style_light_align_center:Shop%20Now,w_0.5,y_0.18/v1742709995/showcase_1_gqzqhr.png",
-    coverImage: "https://res.cloudinary.com/dnc96hent/image/upload/c_fill,g_auto,h_250,w_970/b_rgb:000000,e_gradient_fade,y_-0.50/c_scale,co_rgb:ffffff,fl_relative,l_text:montserrat_25_style_light_align_center:Shop%20Now,w_0.5,y_0.18/v1742709995/showcase_1_gqzqhr.png",
+    imageUrl: "https://asset.cloudinary.com/dnc96hent/433b145c46145c808e925e0ed0227a0d",
+    coverImage: "https://asset.cloudinary.com/dnc96hent/433b145c46145c808e925e0ed0227a0d",
     tagline: "Building a unified design language for enterprise software",
     client: "Forto",
     timeline: "8 months",
