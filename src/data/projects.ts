@@ -32,8 +32,8 @@ export const projects: Project[] = [
       "Developer handoff",
       "Documentation & governance"
     ],
-    imageUrl: "https://asset.cloudinary.com/dnc96hent/433b145c46145c808e925e0ed0227a0d",
-    coverImage: "https://asset.cloudinary.com/dnc96hent/433b145c46145c808e925e0ed0227a0d",
+    imageUrl: "https://imgur.com/a/yoLxekt",
+    coverImage: "https://imgur.com/a/yoLxekt",
     tagline: "Building a unified design language for enterprise software",
     client: "Forto",
     timeline: "8 months",
