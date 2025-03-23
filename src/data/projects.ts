@@ -32,8 +32,8 @@ export const projects: Project[] = [
       "Developer handoff",
       "Documentation & governance"
     ],
-    imageUrl: "https://imgur.com/a/yoLxekt",
-    coverImage: "https://imgur.com/a/yoLxekt",
+    imageUrl: "https://github.com/kennyedward/project-storyteller/blob/main/public/showcase_1.png?raw=true",
+    coverImage: "https://github.com/kennyedward/project-storyteller/blob/main/public/showcase_1.png?raw=true",
     tagline: "Building a unified design language for enterprise software",
     client: "Forto",
     timeline: "8 months",
