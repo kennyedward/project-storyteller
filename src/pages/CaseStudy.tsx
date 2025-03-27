@@ -86,20 +86,83 @@ const CaseStudy = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-black dark:bg-black text-white">
       <Header />
       
       <main className="mb-20">
-        {/* Hero section */}
-        <div className="w-full pt-8 pb-16 md:py-24 px-8 md:px-16">
-          <div className="max-w-5xl mx-auto">
-            <h1 className="font-bricolage text-4xl md:text-6xl font-semibold mb-8">Building Forto's design system from the ground up</h1>
-            <div className="w-full aspect-video overflow-hidden rounded-lg">
-              <img 
-                src="public/lovable-uploads/526ea06a-3144-4a81-ac4e-93405958478c.png" 
-                alt="Forto's design system"
-                className="w-full h-auto object-cover"
-              />
+        {/* Hero section - updated to match design */}
+        <div className="w-full pt-12 pb-16 md:py-24 px-8 md:px-16 bg-black dark:bg-black">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col md:flex-row md:gap-16">
+              <div className="md:w-7/12">
+                <h1 className="font-bricolage text-4xl md:text-5xl lg:text-6xl font-semibold mb-8 text-white">
+                  Building Phoenix design system from the ground up
+                </h1>
+              </div>
+              <div className="md:w-5/12 mt-6 md:mt-0">
+                <p className="font-manrope text-base md:text-lg text-gray-300">
+                  Forto delivers tech-driven solutions to streamlining global logistics, and I
+                  contributed to building a design system for its SHIP platform—a tool for
+                  managing and optimizing shipments.
+                </p>
+              </div>
+            </div>
+
+            {/* Component showcase section */}
+            <div className="mt-16 bg-neutral-900 rounded-xl overflow-hidden border border-neutral-800">
+              <div className="p-8 md:p-12">
+                <img 
+                  src="public/lovable-uploads/c99367f9-41ca-4d5f-a358-32120527f011.png" 
+                  alt="Phoenix design system components"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            </div>
+
+            {/* Project details grid */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-16 mt-16 md:mt-24 text-white">
+              <div>
+                <h3 className="font-bricolage text-lg font-semibold mb-2">Role</h3>
+                <p className="font-manrope text-gray-400">Product designer</p>
+              </div>
+              
+              <div>
+                <h3 className="font-bricolage text-lg font-semibold mb-2">My contribution</h3>
+                <p className="font-manrope text-gray-400">Foundation library, Component library, Documentation and training, Dark mode, Developer handoff</p>
+              </div>
+              
+              <div>
+                <h3 className="font-bricolage text-lg font-semibold mb-2">Team</h3>
+                <p className="font-manrope text-gray-400">1 Lead Product Designer, 2 Design System Developers</p>
+              </div>
+              
+              <div>
+                <h3 className="font-bricolage text-lg font-semibold mb-2">Outcome</h3>
+                <p className="font-manrope text-gray-400">Write about the result of this project. Write a couple of list sentences here to illustrate how easy it for designers to create pages. And how easy it is for designers and developers to onboard</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Challenge and Solution sections */}
+        <div className="w-full py-16 md:py-24 px-8 md:px-16 border-t border-neutral-800">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div>
+              <h2 className="font-bricolage text-2xl md:text-3xl font-semibold mb-6 text-white">Challenge</h2>
+              <p className="font-manrope text-gray-300">
+                As Forto grew and refreshed its brand, we needed a scalable design system 
+                aligned with the updated visual identity to support Forto's growing team and 
+                evolving product needs.
+              </p>
+            </div>
+            
+            <div>
+              <h2 className="font-bricolage text-2xl md:text-3xl font-semibold mb-6 text-white">Solution</h2>
+              <p className="font-manrope text-gray-300">
+                Our priority was to develop a platform-agnostic system that teams could 
+                easily adopt, ensuring seamless integration and theming support for a consistent 
+                user experience.
+              </p>
             </div>
           </div>
         </div>
@@ -129,7 +192,7 @@ const CaseStudy = () => {
             </div>
           </div>
         </CaseStudySection>
-
+        
         {/* Color system section */}
         <CaseStudySection title="">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
