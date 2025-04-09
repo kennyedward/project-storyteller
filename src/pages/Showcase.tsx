@@ -31,14 +31,14 @@ const Showcase = () => {
       case 'foundation':
         return {
           title: 'Building the foundation',
-          content: 'The first step in building Forto's design system was establishing a solid foundation through design tokens. We created a comprehensive set of color, typography, spacing, and other fundamental variables that would serve as the building blocks for all components.',
+          content: 'The first step in building Forto\'s design system was establishing a solid foundation through design tokens. We created a comprehensive set of color, typography, spacing, and other fundamental variables that would serve as the building blocks for all components.',
           image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?q=80&w=1000',
           description: 'By defining these tokens early, we ensured consistency across the entire platform while allowing for flexibility in implementation. The tokens were implemented in both design tools and code, creating a single source of truth.'
         };
       case 'components':
         return {
           title: 'Building core components',
-          content: 'With the foundation in place, we focused on designing and developing a library of core components that would address the most common UI patterns in Forto's applications.',
+          content: 'With the foundation in place, we focused on designing and developing a library of core components that would address the most common UI patterns in Forto\'s applications.',
           image: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1000',
           description: 'Each component was carefully crafted to be flexible, accessible, and performant. We prioritized components based on frequency of use and complexity, starting with basics like buttons, inputs, and cards before moving to more complex patterns.'
         };
@@ -68,7 +68,7 @@ const Showcase = () => {
           title: 'Results',
           content: 'The design system reduced development time by 40%, improved consistency across products, and significantly enhanced the user experience. Designers and developers reported higher satisfaction and productivity.',
           image: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1000',
-          description: 'By establishing a shared language and component library, we not only improved the quality of Forto's digital products but also accelerated the company's ability to innovate and respond to market needs.'
+          description: 'By establishing a shared language and component library, we not only improved the quality of Forto\'s digital products but also accelerated the company\'s ability to innovate and respond to market needs.'
         };
       default:
         return {
